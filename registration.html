@@ -5,11 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-<title>Registration</title>
+
+<title>Bootstrap Simple Registration Form</title>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
 <style type="text/css">
 	body{
 		color: #fff;
@@ -19,7 +22,7 @@
     .form-control{
 		height: 40px;
 		box-shadow: none;
-		color: #969fa4;
+		color: ##f3f3f3;
 	}
 	.form-control:focus{
 		border-color: #5cb85c;
@@ -62,7 +65,7 @@
 		color: #999;
 		border-radius: 3px;
     	margin-bottom: 15px;
-        background: #f2f3f7;
+        background: #f3f3f3;
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
         padding: 30px;
     }
@@ -99,28 +102,26 @@
 		text-decoration: underline;
 	}  
 </style>
+
 </head>
+
 <body>
-<div class="signup-form">
-    <form action="/examples/actions/confirmation.php" method="post">
+
+<div id="signup-div" class="signup-form">
+    <form id="registration">
+		<img src="images/logo.png" alt="logo" height="340" width="340">
 		<h2>Register</h2>
 		<p class="hint-text">Create your account. It's free and only takes a minute.</p>
         <div class="form-group">
-			<div class="row">
-				<div class="col-xs-6"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
-				<div class="col-xs-6"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
-			</div>        	
-        </div>
-        <div class="form-group">
-        	<input type="email" class="form-control" name="email" placeholder="Email" required="required">
+        	<input id="signup-email" type="email" class="form-control" name="email" placeholder="Email" required="required">
         </div>
 		<div class="form-group">
-            <input type="password" class="form-control" name="password" minlength="6" placeholder="Password" required="required">
-        </div>
 		<div class="form-group">
-            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
-        </div>        
-        <div class="form-group">
+			<input id="login" type="text" class="form-control" name="bio" placeholder="Nick/Login" required="required">
+		</div>  
+            <input id="signup-password" type="password" class="form-control" name="password" minlength="6" placeholder="Password" required="required">
+		</div>
+		<div class="form-group">
 			<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
 		</div>
 		<div class="form-group">
@@ -129,5 +130,42 @@
     </form>
 	<div class="text-center">Already have an account? <a href="#">Sign in</a></div>
 </div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+	https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-functions.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDxfeSpFUGHu_W5EDcXFtt1CREJWgbo1LU",
+      authDomain: "musiclibrary-25fdb.firebaseapp.com",
+      databaseURL: "https://musiclibrary-25fdb.firebaseio.com",
+      projectId: "musiclibrary-25fdb",
+      storageBucket: "musiclibrary-25fdb.appspot.com",
+      messagingSenderId: "680696985969",
+      appId: "1:680696985969:web:b535aa4e6835ab27ac9ed0",
+      measurementId: "G-NH16KPQB1E"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    const functions = firebase.functions();
+  </script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
