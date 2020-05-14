@@ -1,0 +1,9 @@
+footer{
+    background-color: black;
+    z-index: 99;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-size: 10px;
+}
