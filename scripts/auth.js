@@ -1,3 +1,19 @@
+// checking authentication status
+auth.onAuthStateChanged(user => {
+    if (user) {
+        console.log('user logged in: ', user);  
+    } else {
+        console.log('user logged out');
+    }
+});
+
+// logout
+const logout = document.querySelector('#logout');
+logout.addEventListener('click', (e) => {
+  e.preventDefault();
+  auth.signOut();
+});
+
 // signup
 const signupForm = document.querySelector('#registration');
     console.log(signupForm)
@@ -25,3 +41,6 @@ signupForm.addEventListener('submit', (e) => {
         signupForm.querySelector('.error').innerHTML = err.message;
     });
 });
+
+
+
