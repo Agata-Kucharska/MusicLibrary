@@ -4,6 +4,16 @@ body
     background: #f2f2f2;
 }
 
+footer{
+    background-color: black;
+    z-index: 99;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-size: 10px;
+}
+
 h1
 {
     text-align: center;

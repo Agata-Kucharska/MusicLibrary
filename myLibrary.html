@@ -24,37 +24,15 @@
     <title>MyBookshelf</title>
 </head>
 <body>
-   
-    <div class="jumbotron"></div>
-    <div class="container rounded">
-        <h1 class="display-4">My Music Bookshelf</h1>
-        <hr>
-        <hr>
-        <input class="form-control" id="myInput" type="text" placeholder="Search the Bookshelf...">
-        <div class="table-responsive-lg">
-            <table class="table table-sm">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>Title</th>
-                        <th>Artist</th>
-                        <th>Genre</th>
-                        <th>Publication year</th>
-                    </tr>
-                </thead>
-                <tbody id="myBookshelfTable"></tbody>
-            </table>
+    <div class="container">
+        <div class="jumbotron"></div>
+        <div class="container rounded">
+            <h1 class="display-4">My Music Bookshelf</h1>
             <hr>
             <hr>
-        </div>
-        <form id="add-toBookshelf-form">
-            <input class="form-control" type="text" name="title" placeholder="Search in whole MusicLibrary..." required>
-            <div>
-                <button id="search" type="button" class="btn btn-primary btn-block">Search</button>
-                <button id="add" class="btn btn-success btn-block">Add to my MusicBookshelf</button>
-            </div>
-        </form>
-            <div style="text-align: left">
-                <table id="searchResult" class="table table-sm ext-align:center;">
+            <input class="form-control" id="myInput" type="text" placeholder="Search the Bookshelf...">
+            <div class="table-responsive-lg">
+                <table class="table table-sm">
                     <thead class="thead-dark">
                         <tr>
                             <th>Title</th>
@@ -63,10 +41,36 @@
                             <th>Publication year</th>
                         </tr>
                     </thead>
-                    <tbody id="searchResults" clas="table-striped"></tbody>
+                    <tbody id="myBookshelfTable"></tbody>
                 </table>
+                <hr>
+                <hr>
             </div>
-    </div>
+            <form id="add-toBookshelf-form">
+                <input class="form-control" type="text" name="title" placeholder="Search in whole MusicLibrary..." required>
+                <div>
+                    <button id="search" type="button" class="btn btn-primary btn-block">Search</button>
+                    <button id="add" class="btn btn-success btn-block">Add to my MusicBookshelf</button>
+                </div>
+            </form>
+                <div style="text-align: left">
+                    <table id="searchResult" class="table table-sm ext-align:center;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Title</th>
+                                <th>Artist</th>
+                                <th>Genre</th>
+                                <th>Publication year</th>
+                            </tr>
+                        </thead>
+                        <tbody id="searchResults" clas="table-striped"></tbody>
+                    </table>
+                </div>
+        </div>
+	</div>
+	<footer>
+        <p>Copyright <span id="copy">&copy;</span> 2020, Agata Kucharska & Michał Gomułka & Grzegorz Gracz</p>
+    </footer>
 
     <script>
     // Your web app's Firebase configuration
