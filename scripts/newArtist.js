@@ -9,6 +9,8 @@ auth.onAuthStateChanged(user => {
 
 document.getElementById("add").onclick = function() {addingData()};
 
+
+
 // updatingMyLibrary
 function addingData(){
 

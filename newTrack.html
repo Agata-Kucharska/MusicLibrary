@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="style/myLibrary.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <title>Adding new Tracks</title>
+</head>
+<body>
+   
+    <div class="jumbotron"></div>
+    <div class="container rounded">
+        <h1 class="display-4">Add new album</h1>
+        <form id="addingAlbums">
+            <input id="checkAlbum" class="form-control" type="text" placeholder="Album title" required>
+            <br>
+            <input id="addTitle" class="form-control" type="text" placeholder="Track title" required>
+            <br>
+            <input id="addLength" class="form-control" type="text" placeholder="Track length (mm:ss)" required>
+            <br>
+            <select id="addNumberOnAlbum" class="browser-default custom-select" required>
+                <option selected>Number on the album</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+          
+            </select>
+            <br>
+            <br>
+                <div>
+                    <button id="add" type="button" class="btn btn-success btn-lg btn-block">Add track to the album</button>
+                </div>
+        </form>
+    </div>
+		<br>
+    <footer>
+        <p>Copyright <span id="copy">&copy;</span> 2020, Agata Kucharska & Michał Gomułka & Grzegorz Gracz</p>
+    </footer>
+
+
+    <script>
+    // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDxfeSpFUGHu_W5EDcXFtt1CREJWgbo1LU",
+            authDomain: "musiclibrary-25fdb.firebaseapp.com",
+            databaseURL: "https://musiclibrary-25fdb.firebaseio.com",
+            projectId: "musiclibrary-25fdb",
+            storageBucket: "musiclibrary-25fdb.appspot.com",
+            messagingSenderId: "680696985969",
+            appId: "1:680696985969:web:b535aa4e6835ab27ac9ed0",
+            measurementId: "G-NH16KPQB1E"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+        firebase.analytics();
+
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+    </script>
+
+    <script src="scripts/newTrack.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</body>
+</html>
