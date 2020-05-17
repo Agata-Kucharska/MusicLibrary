@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="style/myLibrary.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <title>MyBookshelf</title>
+</head>
+<body>
+   
+    <div class="jumbotron"></div>
+    <div class="container rounded">
+        <h1 class="display-4">Add new album</h1>
+        <form id="addingAlbums">
+            <input id="addAuthor" class="form-control" type="text" placeholder="Artist/band name" required>
+            <br>
+            <input id="addYear" class="form-control" type="text" placeholder="Debut year" required>
+            <br>
+            <select id="addGenre" class="browser-default custom-select" required>
+                <option selected>Music genre</option>
+                <option value="pop">pop</option>
+                <option value="rock">rock</option>
+                <option value="dance/electronic/house">dance/electronic/house</option>
+                <option value="soundtracks">soundtracks</option>
+                <option value="rap/hip-hop">rap/hip-hop</option>
+                <option value="dance/electronic/house">dance/electronic/house</option>
+                <option value="elevator music">elevator music</option>
+                <option value="classical/opera">classical/opera</option>
+                <option value="soul/blues">soul/blues</option>
+                <option value="hard rock/metal">hard rock/metal</option>
+            </select>
+            <br>
+            <br>
+            <input id="addBio" class="form-control" type="text" placeholder="Wright artist's/band's bio" required>
+            <br>
+                <div>
+                    <button id="add" type="button" class="btn btn-success btn-lg btn-block">Add artist</button>
+                </div>
+        </form>
+    </div>
+		<br>
+    <footer>
+        <p>Copyright <span id="copy">&copy;</span> 2020, Agata Kucharska & Michał Gomułka & Grzegorz Gracz</p>
+    </footer>
+
+
+    <script>
+    // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDxfeSpFUGHu_W5EDcXFtt1CREJWgbo1LU",
+            authDomain: "musiclibrary-25fdb.firebaseapp.com",
+            databaseURL: "https://musiclibrary-25fdb.firebaseio.com",
+            projectId: "musiclibrary-25fdb",
+            storageBucket: "musiclibrary-25fdb.appspot.com",
+            messagingSenderId: "680696985969",
+            appId: "1:680696985969:web:b535aa4e6835ab27ac9ed0",
+            measurementId: "G-NH16KPQB1E"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+        firebase.analytics();
+
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+    </script>
+
+    <script src="scripts/newArtist.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</body>
+</html>
