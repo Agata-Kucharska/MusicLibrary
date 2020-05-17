@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="style/myLibrary.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <title>MyBookshelf</title>
+</head>
+<body>
+   
+    <div class="jumbotron"></div>
+    <div class="container rounded">
+        <h1 class="display-4">My Music Bookshelf</h1>
+        <hr>
+        <hr>
+        <input class="form-control" id="myInput" type="text" placeholder="Tytuł">
+            <hr>
+            <hr>
+			<div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="przykladowaLista" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Year of creation
+            </button>
+            <div class="dropdown-menu" aria-labelledby="przykladowaLista">
+            <a class="dropdown-item" href="#">2020</a>
+            <a class="dropdown-item" href="#">2019</a>
+            <a class="dropdown-item" href="#">2018</a>
+			<a class="dropdown-item" href="#">2017</a>
+            <a class="dropdown-item" href="#">2016</a>
+            <a class="dropdown-item" href="#">2015</a>	
+            <a class="dropdown-item" href="#">2014</a>
+            <a class="dropdown-item" href="#">2013</a>
+			<a class="dropdown-item" href="#">2012</a>
+            <a class="dropdown-item" href="#">2011</a>
+            <a class="dropdown-item" href="#">2010</a>
+            <a class="dropdown-item" href="#">2009</a>
+            <a class="dropdown-item" href="#">2008</a>
+            <a class="dropdown-item" href="#">2007</a>
+			<a class="dropdown-item" href="#">2006</a>
+            <a class="dropdown-item" href="#">2005</a>
+            <a class="dropdown-item" href="#">2004</a>
+            <a class="dropdown-item" href="#">2003</a>
+            <a class="dropdown-item" href="#">2002</a>
+            <a class="dropdown-item" href="#">2001</a>
+			<a class="dropdown-item" href="#">2000</a>
+            <a class="dropdown-item" href="#">1999</a>
+            <a class="dropdown-item" href="#">1998</a>
+	        <a class="dropdown-item" href="#">1997</a>
+            <a class="dropdown-item" href="#">1996</a>
+            <a class="dropdown-item" href="#">1995</a>
+			<a class="dropdown-item" href="#">1994</a>
+            <a class="dropdown-item" href="#">1993</a>
+            <a class="dropdown-item" href="#">1992</a>
+            <a class="dropdown-item" href="#">1991</a>
+            <a class="dropdown-item" href="#">1990</a>
+            <a class="dropdown-item" href="#">1989</a>
+			<a class="dropdown-item" href="#">1988</a>
+            <a class="dropdown-item" href="#">1987</a>
+            <a class="dropdown-item" href="#">1986</a>
+            <a class="dropdown-item" href="#">1985</a>
+            <a class="dropdown-item" href="#">1984</a>
+            <a class="dropdown-item" href="#">1983</a>
+			<a class="dropdown-item" href="#">1982</a>
+            <a class="dropdown-item" href="#">1981</a>
+            <a class="dropdown-item" href="#">1980</a>
+            <a class="dropdown-item" href="#">1979</a>
+            <a class="dropdown-item" href="#">1978</a>
+            <a class="dropdown-item" href="#">1977</a>
+			<a class="dropdown-item" href="#">1976</a>
+            <a class="dropdown-item" href="#">1975</a>
+            <a class="dropdown-item" href="#">1974</a>
+            <a class="dropdown-item" href="#">1974</a>
+            <a class="dropdown-item" href="#">1973</a>
+            <a class="dropdown-item" href="#">1972</a>
+            <a class="dropdown-item" href="#">1971</a>
+			<a class="dropdown-item" href="#">1970</a>
+            <a class="dropdown-item" href="#">1969</a>
+            <a class="dropdown-item" href="#">1968</a>
+            <a class="dropdown-item" href="#">1967</a>
+            <a class="dropdown-item" href="#">1966</a>
+            <a class="dropdown-item" href="#">1965</a>
+			<a class="dropdown-item" href="#">1964</a>
+            <a class="dropdown-item" href="#">1963</a>
+            <a class="dropdown-item" href="#">1962</a>
+	        <a class="dropdown-item" href="#">1961</a>
+            <a class="dropdown-item" href="#">1960</a>
+            </div>
+            </div>
+			<hr>
+            <hr>
+            <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="przykladowaLista" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Music genre
+            </button>
+            <div class="dropdown-menu" aria-labelledby="przykladowaLista">
+            <a class="dropdown-item" href="#">pop</a>
+            <a class="dropdown-item" href="#">rock</a>
+            <a class="dropdown-item" href="#">dacne/electronic/house</a>
+			<a class="dropdown-item" href="#">soundtracks</a>
+            <a class="dropdown-item" href="#">rap/hip-hop</a>
+            <a class="dropdown-item" href="#">singer/songwriter</a>	
+            <a class="dropdown-item" href="#">classical/opera</a>
+           <a class="dropdown-item" href="#">R&B</a>
+            <a class="dropdown-item" href="#">soul/blues</a>	
+            <a class="dropdown-item" href="#">metal</a>
+			</div>
+            </div>
+			<hr>
+            <hr>
+		   <input class="form-control" id="myInput" type="text" placeholder="Przypisz do wykonawcy">
+		   <hr>
+           <hr>
+		   <input class="form-control" id="myInput" type="text" placeholder="Utwory">
+		   <hr>
+           <hr>
+            <div>
+                <button id="add" class="btn btn-success btn-block">Add album</button>
+            </div>
+        </form>
+    </div>
+		<br>
+    <footer>
+        <p>Copyright <span id="copy">&copy;</span> 2020, Agata Kucharska & Michał Gomułka & Grzegorz Gracz</p>
+    </footer>
+
+
+    <script>
+    // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDxfeSpFUGHu_W5EDcXFtt1CREJWgbo1LU",
+            authDomain: "musiclibrary-25fdb.firebaseapp.com",
+            databaseURL: "https://musiclibrary-25fdb.firebaseio.com",
+            projectId: "musiclibrary-25fdb",
+            storageBucket: "musiclibrary-25fdb.appspot.com",
+            messagingSenderId: "680696985969",
+            appId: "1:680696985969:web:b535aa4e6835ab27ac9ed0",
+            measurementId: "G-NH16KPQB1E"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+        firebase.analytics();
+
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+    </script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</body>
+</html>
