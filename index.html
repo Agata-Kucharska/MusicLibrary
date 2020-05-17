@@ -19,7 +19,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="style/myLibrary.css" />
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="apple-touch-icon" href="/images/icons/icon-72x72.png">
+	<link rel="apple-touch-icon" href="/images/icons/icon-96x96.png">
+	<link rel="apple-touch-icon" href="/images/icons/icon-129x128.png">
+    <link rel="apple-touch-icon" href="/images/icons/icon-512x512.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#89f5b1">
+
+    <link rel="stylesheet" type="text/css" href="style/myLibrary.css" >
     <link rel="stylesheet" type="text/css" href="style/style.css" />
 
     <title>MyBookshelf</title>
@@ -51,7 +59,7 @@
                 </table>
         </div><br>
 
-        
+
         <div>
             <button class="btn btn-info btn-block" onclick="location.href = 'login.html'">Zaloguj się</button>
         </div><br>
@@ -95,3 +103,17 @@
     
 </body>
 </html>
+<script>
+    const PATH = '/scripts/service-worker.js';
+    
+    let isServiceWorkersSupport = ('serviceWorker' in navigator);
+    
+    if (isServiceWorkersSupport) {
+        console.log('Will service worker register?');
+        navigator.serviceWorker.register(PATH).then(function () {
+            console.log("Yes it did.");
+        }).catch(function (err) {
+            console.log("No it didn't. This happened: ", err)
+        });
+    }
+    </script>
