@@ -1,7 +1,7 @@
 {
     "name": "Music Library",
     "short_name": "Music Library",
-    "start_url": "https://agata-kucharska.github.io/MusicLibrary/",
+    "start_url": "https://github.com/Agata-Kucharska/MusicLibrary/blob/master/index.html",
     "display": "standalone",
     "splash_pages": null,
     "background_color": "#FFFFFF",
