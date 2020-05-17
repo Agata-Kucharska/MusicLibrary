@@ -7,12 +7,14 @@ auth.onAuthStateChanged(user => {
     }
 });
 
+/*
 // logout
 const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
   e.preventDefault();
   auth.signOut();
 });
+*/
 
 // signup
 const signupForm = document.querySelector('#registration');

@@ -99,3 +99,9 @@ thead {
     overflow: scroll;
     align-self: center;
 }
+
+.bioChanger {
+    text-align: center;
+    font-weight: bold;
+}
+
