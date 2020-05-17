@@ -67,29 +67,28 @@
 </head>
 <body>
 <div class="login-form">
-    <form action="/examples/actions/confirmation.html" method="post">
+    <form action="/examples/actions/confirmation.html" method="post" id="pomocy">
 	<img src="images/logo.png" alt="logo" height="290" width="280">    
         <h2 class="text-center">Sign in</h2>		
         <div class="text-center social-btn">
             <a href="https://www.facebook.com/" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
-            <a href="https://twitter.com/login?lang=pl" class="btn btn-info btn-block"><i class="fa fa-twitter"></i> Sign in with <b>Twitter</b></a>
 			<a href="https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="btn btn-danger btn-block"><i class="fa fa-google"></i> Sign in with <b>Google</b></a>
         </div>
 		<div class="or-seperator"><i>or</i></div>
         <div class="form-group">
         	<div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+                <input id="emailInfo" type="text" class="form-control" name="username" placeholder="Username" required="required">
             </div>
         </div>
 		<div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                <input id="passwordInfo" type="password" class="form-control" name="password" placeholder="Password" required="required">
             </div>
         </div>        
         <div class="form-group">
-            <button type="submit" onClick="location.href='mainScreen.html';" class="btn btn-success btn-block login-btn">Sign in</button>
+            <button type="submit" class="btn btn-success btn-block login-btn">Sign in</button>
         </div>
         <div class="clearfix">
             <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
@@ -102,5 +101,42 @@
     <footer>
         <p>Copyright <span id="copy">&copy;</span> 2020, Agata Kucharska & Michał Gomułka & Grzegorz Gracz</p>
     </footer>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+	https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-functions.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDxfeSpFUGHu_W5EDcXFtt1CREJWgbo1LU",
+      authDomain: "musiclibrary-25fdb.firebaseapp.com",
+      databaseURL: "https://musiclibrary-25fdb.firebaseio.com",
+      projectId: "musiclibrary-25fdb",
+      storageBucket: "musiclibrary-25fdb.appspot.com",
+      messagingSenderId: "680696985969",
+      appId: "1:680696985969:web:b535aa4e6835ab27ac9ed0",
+      measurementId: "G-NH16KPQB1E"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    const functions = firebase.functions();
+</script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="scripts/login.js"></script>
+
 </body>
-</html>                            
+</html>            
