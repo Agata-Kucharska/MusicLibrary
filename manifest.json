@@ -1,7 +1,7 @@
 {
     "name": "Music Library",
     "short_name": "Music Library",
-    "start_url": "http://wizard.uek.krakow.pl/~s208717/",
+    "start_url": "https://agata-kucharska.github.io/MusicLibrary/",
     "display": "standalone",
     "splash_pages": null,
     "background_color": "#FFFFFF",
