@@ -27,111 +27,36 @@
    
     <div class="jumbotron"></div>
     <div class="container rounded">
-        <h1 class="display-4">My Music Bookshelf</h1>
-        <hr>
-        <hr>
-        <input class="form-control" id="myInput" type="text" placeholder="Tytuł">
-            <hr>
-            <hr>
-			<div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="przykladowaLista" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Year of creation
-            </button>
-            <div class="dropdown-menu" aria-labelledby="przykladowaLista">
-            <a class="dropdown-item" href="#">2020</a>
-            <a class="dropdown-item" href="#">2019</a>
-            <a class="dropdown-item" href="#">2018</a>
-			<a class="dropdown-item" href="#">2017</a>
-            <a class="dropdown-item" href="#">2016</a>
-            <a class="dropdown-item" href="#">2015</a>	
-            <a class="dropdown-item" href="#">2014</a>
-            <a class="dropdown-item" href="#">2013</a>
-			<a class="dropdown-item" href="#">2012</a>
-            <a class="dropdown-item" href="#">2011</a>
-            <a class="dropdown-item" href="#">2010</a>
-            <a class="dropdown-item" href="#">2009</a>
-            <a class="dropdown-item" href="#">2008</a>
-            <a class="dropdown-item" href="#">2007</a>
-			<a class="dropdown-item" href="#">2006</a>
-            <a class="dropdown-item" href="#">2005</a>
-            <a class="dropdown-item" href="#">2004</a>
-            <a class="dropdown-item" href="#">2003</a>
-            <a class="dropdown-item" href="#">2002</a>
-            <a class="dropdown-item" href="#">2001</a>
-			<a class="dropdown-item" href="#">2000</a>
-            <a class="dropdown-item" href="#">1999</a>
-            <a class="dropdown-item" href="#">1998</a>
-	        <a class="dropdown-item" href="#">1997</a>
-            <a class="dropdown-item" href="#">1996</a>
-            <a class="dropdown-item" href="#">1995</a>
-			<a class="dropdown-item" href="#">1994</a>
-            <a class="dropdown-item" href="#">1993</a>
-            <a class="dropdown-item" href="#">1992</a>
-            <a class="dropdown-item" href="#">1991</a>
-            <a class="dropdown-item" href="#">1990</a>
-            <a class="dropdown-item" href="#">1989</a>
-			<a class="dropdown-item" href="#">1988</a>
-            <a class="dropdown-item" href="#">1987</a>
-            <a class="dropdown-item" href="#">1986</a>
-            <a class="dropdown-item" href="#">1985</a>
-            <a class="dropdown-item" href="#">1984</a>
-            <a class="dropdown-item" href="#">1983</a>
-			<a class="dropdown-item" href="#">1982</a>
-            <a class="dropdown-item" href="#">1981</a>
-            <a class="dropdown-item" href="#">1980</a>
-            <a class="dropdown-item" href="#">1979</a>
-            <a class="dropdown-item" href="#">1978</a>
-            <a class="dropdown-item" href="#">1977</a>
-			<a class="dropdown-item" href="#">1976</a>
-            <a class="dropdown-item" href="#">1975</a>
-            <a class="dropdown-item" href="#">1974</a>
-            <a class="dropdown-item" href="#">1974</a>
-            <a class="dropdown-item" href="#">1973</a>
-            <a class="dropdown-item" href="#">1972</a>
-            <a class="dropdown-item" href="#">1971</a>
-			<a class="dropdown-item" href="#">1970</a>
-            <a class="dropdown-item" href="#">1969</a>
-            <a class="dropdown-item" href="#">1968</a>
-            <a class="dropdown-item" href="#">1967</a>
-            <a class="dropdown-item" href="#">1966</a>
-            <a class="dropdown-item" href="#">1965</a>
-			<a class="dropdown-item" href="#">1964</a>
-            <a class="dropdown-item" href="#">1963</a>
-            <a class="dropdown-item" href="#">1962</a>
-	        <a class="dropdown-item" href="#">1961</a>
-            <a class="dropdown-item" href="#">1960</a>
-            </div>
-            </div>
-			<hr>
-            <hr>
-            <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="przykladowaLista" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Music genre
-            </button>
-            <div class="dropdown-menu" aria-labelledby="przykladowaLista">
-            <a class="dropdown-item" href="#">pop</a>
-            <a class="dropdown-item" href="#">rock</a>
-            <a class="dropdown-item" href="#">dacne/electronic/house</a>
-			<a class="dropdown-item" href="#">soundtracks</a>
-            <a class="dropdown-item" href="#">rap/hip-hop</a>
-            <a class="dropdown-item" href="#">singer/songwriter</a>	
-            <a class="dropdown-item" href="#">classical/opera</a>
-           <a class="dropdown-item" href="#">R&B</a>
-            <a class="dropdown-item" href="#">soul/blues</a>	
-            <a class="dropdown-item" href="#">metal</a>
-			</div>
-            </div>
-			<hr>
-            <hr>
-		   <input class="form-control" id="myInput" type="text" placeholder="Przypisz do wykonawcy">
-		   <hr>
-           <hr>
-		   <input class="form-control" id="myInput" type="text" placeholder="Utwory">
-		   <hr>
-           <hr>
+        <h1 class="display-4">Add new album</h1>
+        <form id="addingAlbums">
+            <input id="addTitle" class="form-control" type="text" placeholder="Title" required>
+            <br>
+            <input id="addAuthor" class="form-control" type="text" placeholder="Author: artist/band" required>
+            <br>
+            <input id="addYear" class="form-control" type="text" placeholder="Publication year" required>
+            <br>
+            <select id="addGenre" class="browser-default custom-select" required>
+                <option selected>Music genre</option>
+                <option value="pop">pop</option>
+                <option value="rock">rock</option>
+                <option value="dance/electronic/house">dance/electronic/house</option>
+                <option value="soundtracks">soundtracks</option>
+                <option value="rap/hip-hop">rap/hip-hop</option>
+                <option value="dance/electronic/house">dance/electronic/house</option>
+                <option value="elevator music">elevator music</option>
+                <option value="classical/opera">classical/opera</option>
+                <option value="soul/blues">soul/blues</option>
+                <option value="hard rock/metal">hard rock/metal</option>
+            </select>
+            <br>
+            <br>
             <div>
-                <button id="add" class="btn btn-success btn-block">Add album</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href = 'newTrack.html'">Manage the tracklist</button>
             </div>
+            <br>
+                <div>
+                    <button id="add" type="button" class="btn btn-success btn-lg btn-block">Add album</button>
+                </div>
         </form>
     </div>
 		<br>
@@ -161,8 +86,7 @@
         const auth = firebase.auth();
     </script>
 
-    <script src="scripts/app.js"></script>
-    <script src="scripts/auth.js"></script>
+    <script src="scripts/newAlbum.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
